@@ -1,0 +1,30 @@
+employee		member			director		superadmin
+
+
+
+Show
+
+name			name			name			name
+username		username		username		username
+address			address			address			address
+salary			adharnum		role			salary
+hours			startdate						hours
+adharnum		amountpaid						adharnum
+todaydate		favsports						todaydate
+role			todaysdate						favsports
+				role							startdate
+												amountpaid
+												role
+
+
+not edit
+
+add member		amountpaid		startdate			
+no edit			startdate		hours
+								amountpaid
+									
+									
+				
+		
+				
+				

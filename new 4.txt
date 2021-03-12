@@ -1,0 +1,9 @@
+<td><a href='edit.php?pid=".$res['id']."'>Edit</a></td>
+
+
+edit.php
+
+$id= $_REQUEST['pid
+
+POST     post, request       
+GET   get, request0

@@ -1,0 +1,148 @@
+<?include_once 'connection.php';?>
+
+<head>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text],input[type=date],input[type=email],input[type=password],textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}   
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+h2{
+     color:Red;
+  }
+</style>
+
+ <script>
+ function validation()
+ {
+  var name=document.Empform.name;
+  var username=document.Empform.username;
+  var pass=document.Empform.pass;
+  var anum=document.Empform.anum;
+  var sal=document.Empform.sal;
+  var hour=document.Empform.hour;
+  var sdate=document.Empform.sdate;
+  var tdate=document.Empform.tdate
+  if(username.value.length<=0)
+  {
+    alert("username is required pls fill it");
+    username.focus();
+    return false;
+  }
+  if(name.value.length<=0)
+  {
+    alert("name is required pls fill it");
+    name.focus();
+    return false;
+  }
+  if(pass.value.length<=0)
+  {
+    alert("password is required please fill it");
+    pass.focus();
+    return false;
+  } if(anum.value.length<=0)
+  {
+    alert(" pls fill adhar details");
+    anum.focus();
+    return false;
+  } if(sal.value.length<=0)
+  {
+    alert("salary is required pls fill it");
+    sal.focus();
+    return false;
+  } if(hour.value.length<=0)
+  {
+    alert("hoursworked is required pls fill it");
+    hour.focus();
+    return false;
+  } if(sdate.value.length<=0)
+  {
+    alert("startdate is required pls fill it");
+    sdate.focus();
+    return false;
+  }
+  if(tdate.value.length<=0)
+  {
+    alert("todaysdate is required pls fill it");
+    tdate.focus();
+    return false;
+  }
+  
+    return false;
+ }
+ function Stringvalidate(id)
+ {
+   var element=document.getElementById(id)
+   var regExp =/^[a-zA-Z]+$/;
+   if(!regExp.test(element.value))
+   {
+     alert("Enter valid value for field Number is not allowed");
+     element.focus();
+     return false;
+   }
+  }
+   function Numbervalidate(id)
+ {
+   var element=document.getElementById(id)
+   var regExp =/^[0-9]{10}+$/;
+   if(!regExp.test(element.value))
+   {
+     alert("Enter number value");
+    // element.focus();
+     return false;
+   }
+ }
+
+  </script>
+</head>  
+
+  
+ <body>  
+     <h2>Registration as Member</h2>  
+    <form name="Empform" method="post" action="member_post.php" onsubmit="return validation()">  
+     <fieldset>  
+        <legend>User personal information</legend>  
+        <label>Name</label><br>  
+        <input type="text" name="name"><br>  
+         <label>Username</label><br>  
+         <input type="email" name="username"><br>  
+         <label>password</label><br>  
+         <input type="password" name="pass"><br>  
+         <label>AdharNum</label><br>  
+         <input type="text" name="AdhaarcardNum" maxlength=10 minlength=10 pattern[0-9]><br>   
+          <br>
+          <label>Enter your Address:</label> <br>
+          <input type="text" name="add"><br>
+         <label>AmountPaid</label><br>  
+        <input type="text" name="amountpaid"><br> 
+          <label>Faviourate sport</label><br>  
+        <input type="text" name="fsport"><br> 
+        <label for="startdate">startdate:</label><br>
+       <input type="date" id="birthday" name="startdate"><br>
+        <!--label for="todaysdate">Todays date:</label><br>
+        <input type="date" id="todaysdate" name="todaysdate"> <br--><br>
+         <input type="submit" name="submit" value="Register">  
+     
+        </fieldset>  
+  </form>  
+ </body>  

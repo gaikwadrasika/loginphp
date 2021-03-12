@@ -1,0 +1,32 @@
+<?php
+          if(!empty($finalarray))
+          {
+            foreach($finalarray as $key=>$value)
+            {
+
+                $id = $value['id'];
+            ?>
+            <tr>
+                <td><?php echo $value['name'];?></td>
+                <td><?php echo $value['username'];?></td>
+                <td><?php echo $value['address'];?></td>
+                <td><?php echo $value['adharNum'];?></td>
+                <td><?php echo $value['startdate'];?></td>
+                <td><?php echo $value['salary'];?></td>
+                <td><?php echo $value['hours'];?></td>
+                <td><?php echo $value['todaysdate'];?></td>
+                <td><?php echo $value['amountpaid'];?></td>
+                <td><?php echo $value['favsports'];?></td>
+                <td><?php echo $value['role'];?></td>
+                <td><a href="edit.php?id=<?php echo $value['id'];?>">Edit</a></td>
+                
+                
+            </tr>
+            <?php
+            }
+          }
+          else{
+
+          }
+          ?>
+          
